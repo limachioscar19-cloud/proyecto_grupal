@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoMarket: productos ecológicos, a granel y consumo responsable. Pedidos directos por WhatsApp.">
+    <title>EcoMarket | Tienda Ecológica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="brand" data-view="inicio">
+                <span class="brand-mark">🌊</span>
+                <span class="brand-name">EcoMarket <small>Sostenible</small></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <button class="nav-link active" data-view="inicio">Inicio</button>
+                <button class="nav-link" data-view="menu">Catálogo a granel</button>
+                <button class="nav-link" data-view="especiales">Productos estrella</button>
+                <button class="nav-link" data-view="pedidos">Hacer pedido</button>
+                <button class="nav-link" data-view="ubicacion">Ubicación</button>
+                <button class="nav-link" data-view="contacto">Contacto</button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-button" id="themeToggle" aria-label="Cambiar tema">☾</button>
+                <button class="cart-button" id="cartOpen">Mi canasta <span id="cartCount">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <!-- INICIO -->
+        <section class="page-section active" id="inicio">
+            <div class="hero container">
+                <div class="hero-copy">
+                    <span class="eyebrow">ESTILO DE VIDA ZERO WASTE</span>
+                    <h1>Consume consciente,<br><em>protege el futuro.</em></h1>
+                    <p>En EcoMarket impulsamos el consumo local, alimentos orgánicos a granel y alternativas libres de plástico para transformar nuestros hábitos diarios.</p>
+
+                    <div class="hero-buttons">
+                        <button class="button button-primary" data-view="menu">Explorar catálogo →</button>
+                        <button class="button button-outline" data-view="pedidos">Armar mi canasta</button>
+                    </div>
+
+                    <div class="hero-note">✦ 100% Empaques biodegradables y retornables</div>
+                </div>
+
+                <div class="hero-art">
+                    <div class="art-circle"></div>
+                    <div class="food-plate">
+                        <div class="plate-inner">
+                            <span class="food-main">🌿</span>
+                            <span class="food-leaf">💧</span>
+                            <span class="food-spark">✨</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="welcome-strip container">
+                <div>
+                    <span class="section-kicker">INNOVACIÓN VERDE</span>
+                    <h2>Un nuevo concepto de <em>comercio justo.</em></h2>
+                </div>
+                <p>Compra exactamente lo que necesitas evitando desperdicios de alimentos y reduciendo la huella de carbono.</p>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO A GRANEL -->
+        <section class="page-section" id="menu">
+            <div class="container page-content">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">VENTA A MEDIDA</span>
+                        <h2>Catálogo a <em>granel</em></h2>
+                    </div>
+                    <p>Selecciona por categorías y adquiere porciones justas.</p>
+                </div>
+
+                <div class="price-information">
+                    <div>
+                        <h3>Granos y Semillas</h3>
+                        <span>Alimentos de alta densidad nutricional</span>
+                        <b>Desde 12 Bs / 500g</b>
+                    </div>
+                    <div>
+                        <h3>Frutos Secos</h3>
+                        <span>Selección premium natural</span>
+                        <b>Desde 25 Bs / 250g</b>
+                    </div>
+                    <div>
+                        <h3>Superalimentos</h3>
+                        <span>Energía pura para tu día</span>
+                        <b>Desde 18 Bs / 250g</b>
+                    </div>
+                </div>
+
+                <div class="menu-tools">
+                    <label class="search-box">
+                        <span>⌕</span>
+                        <input type="search" id="weeklySearch" placeholder="Buscar productos ecológicos...">
+                    </label>
+                </div>
+
+                <div class="days-grid" id="weeklyMenu">
+
+                    <article class="day-card">
+                        <button class="day-header" aria-expanded="false">
+                            <span class="day-icon">🌾</span>
+                            <span class="day-title">
+                                <strong>Granos y Cereales</strong>
+                                <small>4 variedades disponibles</small>
+                            </span>
+                            <span class="day-arrow">+</span>
+                        </button>
+                        <div class="day-details">
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=240&q=80" alt="Quinoa real">
+                                <div><small>ORGÁNICO</small><strong>Quinoa Real (500g)</strong><b>18 Bs</b></div>
+                            </article>
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1517622058086-91f66d40d9d4?auto=format&fit=crop&w=240&q=80" alt="Avena integral">
+                                <div><small>GRANEL</small><strong>Avena Integral (1kg)</strong><b>12 Bs</b></div>
+                            </article>
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=240&q=80" alt="Arroz integral">
+                                <div><small>GRANEL</small><strong>Arroz Integral (1kg)</strong><b>14 Bs</b></div>
+                            </article>
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=240&q=80" alt="Lentejas">
+                                <div><small>LEGUMBRE</small><strong>Lenteja Selecta (500g)</strong><b>10 Bs</b></div>
+                            </article>
+                        </div>
+                    </article>
+
+                    <article class="day-card">
+                        <button class="day-header" aria-expanded="false">
+                            <span class="day-icon">🌰</span>
+                            <span class="day-title">
+                                <strong>Frutos Secos y Snacks</strong>
+                                <small>4 variedades disponibles</small>
+                            </span>
+                            <span class="day-arrow">+</span>
+                        </button>
+                        <div class="day-details">
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1508061253366-f7da15bbf6e4?auto=format&fit=crop&w=240&q=80" alt="Almendras">
+                                <div><small>PREMIUM</small><strong>Almendras Naturales (250g)</strong><b>28 Bs</b></div>
+                            </article>
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=240&q=80" alt="Nueces">
+                                <div><small>NACIONAL</small><strong>Nueces Peladas (250g)</strong><b>30 Bs</b></div>
+                            </article>
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1596540538699-122fb514050d?auto=format&fit=crop&w=240&q=80" alt="Pasas de uva">
+                                <div><small>NATURAL</small><strong>Pasas de Uva (500g)</strong><b>15 Bs</b></div>
+                            </article>
+                            <article class="food-option">
+                                <img src="https://images.unsplash.com/photo-1543168257-41865a7dfa32?auto=format&fit=crop&w=240&q=80" alt="Mix energético">
+                                <div><small>ESPECIAL</small><strong>Mix Energético Eco (250g)</strong><b>22 Bs</b></div>
+                            </article>
+                        </div>
+                    </article>
+
+                </div>
+                <p class="info-note">Tráenos tus frascos o bolsitas de tela para recargar tus productos favoritos.</p>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS ESTRELLA -->
+        <section class="page-section" id="especiales">
+            <div class="container page-content">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">ZERO WASTE & BIENESTAR</span>
+                        <h2>Productos <em>estrella</em></h2>
+                    </div>
+                    <p>Alternativas ecológicas para el cuidado personal y del hogar.</p>
+                </div>
+
+                <div class="special-grid">
+                    <article class="special-card">
+                        <img src="https://images.unsplash.com/photo-1608248597359-99427b88950d?auto=format&fit=crop&w=600&q=85" alt="Champú sólido">
+                        <h3>Champú Sólido Natural</h3><strong>35 Bs</strong>
+                    </article>
+                    <article class="special-card">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=85" alt="Cepillo de bambú">
+                        <h3>Cepillo Dental de Bambú (Pack x3)</h3><strong>30 Bs</strong>
+                    </article>
+                    <article class="special-card">
+                        <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=85" alt="Desodorante natural">
+                        <h3>Desodorante Orgánico en Crema</h3><strong>45 Bs</strong>
+                    </article>
+                    <article class="special-card">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=85" alt="Bolsas reutilizables">
+                        <h3>Set de Bolsas Reutilizables (x5)</h3><strong>40 Bs</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PEDIDOS -->
+        <section class="page-section" id="pedidos">
+            <div class="container page-content">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">GESTIÓN DE COMPRAS</span>
+                        <h2>Arma tu <em>canasta</em></h2>
+                    </div>
+                    <p>Selecciona tus productos a granel y artículos ecológicos.</p>
+                </div>
+
+                <div class="order-layout">
+                    <div class="order-card">
+                        <h3>Productos a Granel</h3>
+                        <p>Elige la categoría y el producto deseado.</p>
+
+                        <label for="lunchDay">Categoría</label>
+                        <select id="lunchDay">
+                            <option>Granos y Cereales</option>
+                            <option>Frutos Secos y Snacks</option>
+                        </select>
+
+                        <label for="lunchSecond">Producto específico</label>
+                        <select id="lunchSecond">
+                            <option>Quinoa Real (500g)</option>
+                            <option>Avena Integral (1kg)</option>
+                            <option>Arroz Integral (1kg)</option>
+                            <option>Lenteja Selecta (500g)</option>
+                        </select>
+
+                        <label for="lunchQuantity">Cantidad</label>
+                        <input type="number" id="lunchQuantity" min="1" max="20" value="1">
+
+                        <div class="price-line">
+                            <span>Precio referencial</span>
+                            <strong>18 Bs</strong>
+                        </div>
+
+                        <button class="button button-primary" id="addLunch">Agregar a la canasta</button>
+
+                        <hr>
+
+                        <h3>Pedido rápido</h3>
+                        <p>Selecciona presentaciones adicionales.</p>
+
+                        <label for="separateDay">Sección</label>
+                        <select id="separateDay">
+                            <option>Granel General</option>
+                            <option>Selección Especial</option>
+                        </select>
+
+                        <label for="separateType">Presentación</label>
+                        <select id="separateType">
+                            <option value="segundo">Bolsa 500g - 15 Bs</option>
+                            <option value="sopa">Bolsa 250g - 10 Bs</option>
+                        </select>
+
+                        <label for="separateDish">Variedad</label>
+                        <select id="separateDish">
+                            <option>Almendras Naturales</option>
+                            <option>Nueces Peladas</option>
+                            <option>Pasas de Uva</option>
+                        </select>
+
+                        <label for="separateQuantity">Cantidad</label>
+                        <input type="number" id="separateQuantity" min="1" max="20" value="1">
+
+                        <button class="button button-primary" id="addSeparate">Agregar producto</button>
+                    </div>
+
+                    <div class="order-card">
+                        <h3>Productos Estrella</h3>
+                        <p>Artículos sustentables para entrega inmediata.</p>
+
+                        <label for="specialDish">Selecciona un artículo</label>
+                        <select id="specialDish">
+                            <option value="Champú Sólido Natural" data-price="35">Champú Sólido Natural - 35 Bs</option>
+                            <option value="Cepillo Dental de Bambú (Pack x3)" data-price="30">Cepillo Dental de Bambú - 30 Bs</option>
+                            <option value="Desodorante Orgánico en Crema" data-price="45">Desodorante Orgánico - 45 Bs</option>
+                            <option value="Set de Bolsas Reutilizables (x5)" data-price="40">Set de Bolsas Reutilizables - 40 Bs</option>
+                        </select>
+
+                        <label for="specialQuantity">Cantidad</label>
+                        <input type="number" id="specialQuantity" min="1" max="20" value="1">
+
+                        <button class="button button-primary" id="addSpecial">Agregar artículo</button>
+
+                        <div class="order-help">
+                            <strong>¿Canasta lista?</strong>
+                            <p>Abre “Mi canasta” para revisar el resumen y proceder con el envío por WhatsApp.</p>
+                            <button class="button button-outline" id="openCartFromOrders">Revisar mi canasta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UBICACIÓN -->
+        <section class="page-section" id="ubicacion">
+            <div class="container centered-page">
+                <div class="location-symbol">📍</div>
+                <span class="section-kicker">NUESTRO LOCAL</span>
+                <h2>Visítanos en el <em>centro.</em></h2>
+                <p class="page-description">Acércate a conocer nuestra estación de recarga ecológica.</p>
+
+                <div class="map-frame">
+                    <iframe title="Mapa de EcoMarket" src="https://www.google.com/maps?q=-16.5000,-68.1500&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <a class="button button-primary map-link" href="https://www.google.com/maps/dir/?api=1&destination=-16.5000,-68.1500" target="_blank" rel="noopener">Cómo llegar con Google Maps →</a>
+                <p class="coordinates">Av. Mariscal Santa Cruz, La Paz</p>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="page-section" id="contacto">
+            <div class="container centered-page">
+                <span class="section-kicker">CANALES OFICIALES</span>
+                <h2>Contáctanos</h2>
+                <p class="page-description">Escríbenos para resolver cualquier consulta sobre nuestros productos.</p>
+
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <span>💬</span>
+                        <h3>WhatsApp</h3>
+                        <p>78826105</p>
+                        <a href="https://wa.me/59178826105" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+                    </article>
+
+                    <article class="contact-card">
+                        <span>🏪</span>
+                        <h3>Tienda</h3>
+                        <p>Atención de lunes a sábado.</p>
+                        <button class="text-button" data-view="ubicacion">Ver ubicación</button>
+                    </article>
+
+                    <article class="contact-card">
+                        <span>⏰</span>
+                        <h3>Horarios</h3>
+                        <p>09:00 - 19:00 hrs</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <span>© <span id="year"></span> EcoMarket Sostenible</span>
+            <span>Consume consciente, protege el futuro.</span>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <div>
+                <span class="section-kicker">ECO-MARKET</span>
+                <h2>Mi canasta</h2>
+            </div>
+            <button class="close-button" id="cartClose" aria-label="Cerrar">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Todavía no agregaste productos.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cartTotal">0 Bs</strong>
+            </div>
+            <button class="button button-primary checkout-button" id="checkoutButton">Continuar con mi pedido →</button>
+        </div>
+    </aside>
+
+    <div class="modal-backdrop" id="orderModal">
+        <form class="order-modal" id="orderForm" novalidate>
+            <button type="button" class="close-button modal-close" id="modalClose" aria-label="Cerrar">×</button>
+            <span class="section-kicker">FINALIZAR COMPRA</span>
+            <h2>Completa tus <em>datos</em></h2>
+            <p class="modal-description">Proporciona tus datos para coordinar la entrega de tu canasta.</p>
+
+            <label for="customerName">Nombre completo</label>
+            <input type="text" id="customerName" placeholder="Escribe tu nombre">
+            <small class="field-error" id="nameError"></small>
+
+            <label for="customerPhone">Tu número de celular</label>
+            <input type="tel" id="customerPhone" placeholder="Ej. 70000000">
+            <small class="field-error" id="phoneError"></small>
+
+            <label for="customerNote">Detalle adicional (opcional)</label>
+            <textarea id="customerNote" rows="3" placeholder="Instrucciones especiales..."></textarea>
+
+            <button type="submit" class="button button-primary submit-order">Enviar pedido por WhatsApp →</button>
+            <p class="form-message" id="formMessage"></p>
+        </form>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
