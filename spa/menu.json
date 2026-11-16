@@ -1,0 +1,184 @@
+{
+  "negocio": {
+    "nombre": "Spa Armonía",
+    "whatsapp": "59170000000"
+  },
+  "moneda": "Bs",
+  "maxPersonas": 6,
+  "horarios": [
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00"
+  ],
+  "destacados": [
+    {
+      "titulo": "Masaje relajante",
+      "detalle": "60 minutos de calma profunda",
+      "precio": 180
+    },
+    {
+      "titulo": "Limpieza facial profunda",
+      "detalle": "Piel limpia y luminosa",
+      "precio": 150
+    },
+    {
+      "titulo": "Pedicure spa",
+      "detalle": "Cuidado y descanso para tus pies",
+      "precio": 90
+    }
+  ],
+  "categorias": [
+    {
+      "nombre": "Masajes",
+      "icono": "🌿",
+      "servicios": [
+        {
+          "nombre": "Masaje relajante",
+          "duracion": "60 min",
+          "precio": 180,
+          "imagen": "imagenes/masajes/masaje-relajante.svg"
+        },
+        {
+          "nombre": "Masaje descontracturante",
+          "duracion": "60 min",
+          "precio": 200,
+          "imagen": "imagenes/masajes/masaje-descontracturante.svg"
+        },
+        {
+          "nombre": "Masaje con piedras calientes",
+          "duracion": "75 min",
+          "precio": 240,
+          "imagen": "imagenes/masajes/masaje-con-piedras-calientes.svg"
+        },
+        {
+          "nombre": "Masaje craneal y cuello",
+          "duracion": "30 min",
+          "precio": 90,
+          "imagen": "imagenes/masajes/masaje-craneal-y-cuello.svg"
+        }
+      ]
+    },
+    {
+      "nombre": "Faciales",
+      "icono": "✿",
+      "servicios": [
+        {
+          "nombre": "Limpieza facial profunda",
+          "duracion": "60 min",
+          "precio": 150,
+          "imagen": "imagenes/faciales/limpieza-facial-profunda.svg"
+        },
+        {
+          "nombre": "Facial hidratante",
+          "duracion": "45 min",
+          "precio": 130,
+          "imagen": "imagenes/faciales/facial-hidratante.svg"
+        },
+        {
+          "nombre": "Facial antiedad",
+          "duracion": "60 min",
+          "precio": 190,
+          "imagen": "imagenes/faciales/facial-antiedad.svg"
+        }
+      ]
+    },
+    {
+      "nombre": "Corporales",
+      "icono": "◐",
+      "servicios": [
+        {
+          "nombre": "Exfoliación corporal",
+          "duracion": "45 min",
+          "precio": 160,
+          "imagen": "imagenes/corporales/exfoliacion-corporal.svg"
+        },
+        {
+          "nombre": "Envoltura de algas",
+          "duracion": "60 min",
+          "precio": 210,
+          "imagen": "imagenes/corporales/envoltura-de-algas.svg"
+        },
+        {
+          "nombre": "Aromaterapia",
+          "duracion": "50 min",
+          "precio": 140,
+          "imagen": "imagenes/corporales/aromaterapia.svg"
+        }
+      ]
+    },
+    {
+      "nombre": "Manos y pies",
+      "icono": "❀",
+      "servicios": [
+        {
+          "nombre": "Manicure spa",
+          "duracion": "45 min",
+          "precio": 70,
+          "imagen": "imagenes/manos-y-pies/manicure-spa.svg"
+        },
+        {
+          "nombre": "Pedicure spa",
+          "duracion": "60 min",
+          "precio": 90,
+          "imagen": "imagenes/manos-y-pies/pedicure-spa.svg"
+        },
+        {
+          "nombre": "Reflexología de pies",
+          "duracion": "40 min",
+          "precio": 110,
+          "imagen": "imagenes/manos-y-pies/reflexologia-de-pies.svg"
+        }
+      ]
+    }
+  ],
+  "paquetes": [
+    {
+      "nombre": "Día de spa completo",
+      "descripcion": "Circuito de relajación, masaje y facial",
+      "duracion": "180 min",
+      "precio": 520,
+      "imagen": "imagenes/paquetes/dia-de-spa-completo.svg"
+    },
+    {
+      "nombre": "Escapada en pareja",
+      "descripcion": "Masaje para dos y aromaterapia",
+      "duracion": "150 min",
+      "precio": 420,
+      "imagen": "imagenes/paquetes/escapada-en-pareja.svg"
+    },
+    {
+      "nombre": "Ritual de novia",
+      "descripcion": "Facial, manicure y masaje relajante",
+      "duracion": "200 min",
+      "precio": 480,
+      "imagen": "imagenes/paquetes/ritual-de-novia.svg"
+    },
+    {
+      "nombre": "Detox corporal",
+      "descripcion": "Exfoliación, envoltura y masaje",
+      "duracion": "120 min",
+      "precio": 380,
+      "imagen": "imagenes/paquetes/detox-corporal.svg"
+    },
+    {
+      "nombre": "Relax para mamás",
+      "descripcion": "Masaje, facial hidratante y pedicure",
+      "duracion": "90 min",
+      "precio": 300,
+      "imagen": "imagenes/paquetes/relax-para-mamas.svg"
+    },
+    {
+      "nombre": "Mañana de belleza",
+      "descripcion": "Limpieza facial, manicure y pedicure",
+      "duracion": "120 min",
+      "precio": 350,
+      "imagen": "imagenes/paquetes/manana-de-belleza.svg"
+    }
+  ]
+}
