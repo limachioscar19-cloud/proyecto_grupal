@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="#1f3f3d" name="theme-color" />
+    <link href="manifest.json" rel="manifest" />
+    <link href="icons/icon-192.png" rel="icon" type="image/png" />
+    <link href="icons/icon-192.png" rel="apple-touch-icon" />
+    <meta content="Spa Armonía: masajes, faciales, tratamientos corporales y reservas por WhatsApp." name="description" />
+    <title>Spa Armonía</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a class="brand" data-view="inicio" href="#">
+                <span class="brand-mark">SA</span>
+                <span class="brand-name">Spa <small>Armonía</small></span>
+            </a>
+            <button aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menú" class="menu-toggle" id="menuToggle" type="button">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <button class="nav-link active" data-view="inicio" type="button">Inicio</button>
+                <button class="nav-link" data-view="tratamientos" type="button">Tratamientos</button>
+                <button class="nav-link" data-view="paquetes" type="button">Paquetes especiales</button>
+                <button class="nav-link" data-view="reservas" type="button">Reservas</button>
+                <button class="nav-link" data-view="ubicacion" type="button">Ubicación</button>
+                <button class="nav-link" data-view="contacto" type="button">Contacto</button>
+            </div>
+            <div class="nav-actions">
+                <span class="net-status" id="netStatus" role="status">En línea</span>
+                <button class="button button-outline install-button" id="installBtn" type="button" hidden>Instalar app</button>
+                <button aria-label="Cambiar tema" class="icon-button" id="themeToggle" type="button">☾</button>
+                <button class="cart-button" id="cartOpen" type="button">Mi reserva <span id="cartCount">0</span></button>
+            </div>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="page-section active" id="inicio">
+            <div class="hero container">
+                <div class="hero-copy">
+                    <span class="eyebrow">BIENESTAR PARA CUERPO Y MENTE</span>
+                    <h1>Respira, relájate,<br/><em>renuévate.</em></h1>
+                    <p>En Spa Armonía encontrarás masajes, tratamientos faciales y corporales en un ambiente de calma. Reserva tu momento de bienestar.</p>
+                    <div class="hero-buttons">
+                        <button class="button button-primary" data-view="tratamientos" type="button">Ver tratamientos →</button>
+                        <button class="button button-outline" data-view="reservas" type="button">Reservar ahora</button>
+                    </div>
+                    <div class="hero-note">✦ Un espacio pensado para ti</div>
+                </div>
+                <div class="hero-art">
+                    <div class="art-circle"></div>
+                    <div class="logo-container">
+                        <img src="imagenes/logo.png" alt="Logo de Spa Armonía">
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-strip container">
+                <div>
+                    <span class="section-kicker">BIENVENIDOS</span>
+                    <h2>Un momento <em>para ti.</em></h2>
+                </div>
+                <p>Masajes, faciales, tratamientos corporales y paquetes especiales. Elige tu tratamiento, tu fecha y tu horario.</p>
+            </div>
+        </section>
+        <section class="page-section" id="tratamientos">
+            <div class="container page-content">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">NUESTROS SERVICIOS</span>
+                        <h2>Tratamientos de <em>bienestar</em></h2>
+                    </div>
+                    <p>Consulta la duración y el precio por persona de cada tratamiento.</p>
+                </div>
+                <div class="price-information" id="priceInfo"></div>
+                <div class="menu-tools">
+                    <label class="search-box">
+                        <span>⌕</span>
+                        <input id="treatmentSearch" placeholder="Buscar un tratamiento..." type="search" />
+                    </label>
+                </div>
+                <div class="category-grid" id="treatmentMenu"></div>
+                <p class="info-note">Tratamientos sujetos a disponibilidad. Confirma tu reserva por WhatsApp si deseas más detalles.</p>
+            </div>
+        </section>
+        <section class="page-section" id="paquetes">
+            <div class="container page-content">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">EXPERIENCIAS COMPLETAS</span>
+                        <h2>Paquetes <em>especiales</em></h2>
+                    </div>
+                    <p>Combinaciones de tratamientos con precio por persona.</p>
+                </div>
+                <div class="package-grid" id="packageGrid"></div>
+                <p class="info-note">Las imágenes son ilustrativas y pueden reemplazarse por fotografías reales del spa.</p>
+            </div>
+        </section>
+        <section class="page-section" id="reservas">
+            <div class="container page-content">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">AGENDA TU VISITA</span>
+                        <h2>Haz tu <em>reserva</em></h2>
+                    </div>
+                    <p>Elige el tratamiento, la fecha, el horario y la cantidad de personas.</p>
+                </div>
+                <div class="order-layout">
+                    <div class="order-card">
+                        <h3>Reserva un tratamiento</h3>
+                        <p>Selecciona la categoría y el tratamiento que deseas.</p>
+                        <label for="treatCategory">Categoría</label>
+                        <select id="treatCategory"></select>
+                        <label for="treatService">Tratamiento</label>
+                        <select id="treatService"></select>
+                        <label for="treatDate">Fecha</label>
+                        <input id="treatDate" type="date" />
+                        <label for="treatTime">Horario</label>
+                        <select id="treatTime"></select>
+                        <label for="treatPeople">Cantidad de personas</label>
+                        <input id="treatPeople" max="6" min="1" type="number" value="1" />
+                        <div class="price-line">
+                            <span>Precio por persona</span>
+                            <strong id="treatPrice"></strong>
+                        </div>
+                        <button class="button button-primary" id="addTreatment" type="button">Agregar a mi reserva</button>
+                    </div>
+                    <div class="order-card">
+                        <h3>Paquetes especiales</h3>
+                        <p>Vive una experiencia completa de relajación.</p>
+                        <label for="packageSelect">Selecciona un paquete</label>
+                        <select id="packageSelect"></select>
+                        <label for="packageDate">Fecha</label>
+                        <input id="packageDate" type="date" />
+                        <label for="packageTime">Horario</label>
+                        <select id="packageTime"></select>
+                        <label for="packagePeople">Cantidad de personas</label>
+                        <input id="packagePeople" max="6" min="1" type="number" value="1" />
+                        <button class="button button-primary" id="addPackage" type="button">Agregar paquete</button>
+                        <div class="order-help">
+                            <strong>¿Ya elegiste?</strong>
+                            <p>Abre “Mi reserva” para revisar tus tratamientos, fechas y el total antes de enviarla por WhatsApp.</p>
+                            <button class="button button-outline" id="openCartFromOrders" type="button">Revisar mi reserva</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="ubicacion">
+            <div class="container centered-page">
+                <div class="location-symbol">⌖</div>
+                <span class="section-kicker">VEN A VISITARNOS</span>
+                <h2>Estamos cerca <em>de ti.</em></h2>
+                <p class="page-description">Encuéntranos en esta ubicación. Puedes abrir el mapa para obtener indicaciones.</p>
+                <div class="map-frame">
+                    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-16.4897,-68.1193&amp;z=15&amp;output=embed" title="Mapa de Spa Armonía"></iframe>
+                </div>
+                <a class="button button-primary map-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=-16.4897,-68.1193" rel="noopener noreferrer" target="_blank">Cómo llegar con Google Maps →</a>
+                <p class="coordinates">Coordenadas: -16.4897, -68.1193</p>
+            </div>
+        </section>
+        <section class="page-section" id="contacto">
+            <div class="container centered-page">
+                <span class="section-kicker">ESTAMOS PARA ATENDERTE</span>
+                <h2>Contáctanos</h2>
+                <p class="page-description">Comunícate con nosotros para consultas o para confirmar tu reserva.</p>
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <span>✆</span>
+                        <h3>WhatsApp</h3>
+                        <p>70000000</p>
+                        <a href="https://wa.me/59170000000" rel="noopener noreferrer" target="_blank">Escribir por WhatsApp</a>
+                    </article>
+                    <article class="contact-card">
+                        <span>⌖</span>
+                        <h3>Ubicación</h3>
+                        <p>Consulta el mapa para encontrarnos.</p>
+                        <button class="text-button" data-view="ubicacion" type="button">Ver ubicación</button>
+                    </article>
+                    <article class="contact-card">
+                        <span>◷</span>
+                        <h3>Atención</h3>
+                        <p>Lunes a sábado, de 09:00 a 19:00.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-content">
+            <span>© <span id="year"></span> Spa Armonía</span>
+            <span>Respira. Relájate. Renuévate.</span>
+        </div>
+    </footer>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <div>
+                <span class="section-kicker">SPA ARMONÍA</span>
+                <h2>Mi reserva</h2>
+            </div>
+            <button aria-label="Cerrar" class="close-button" id="cartClose" type="button">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cartTotal">0 Bs</strong>
+            </div>
+            <button class="button button-primary checkout-button" id="checkoutButton" type="button">Continuar con mi reserva →</button>
+        </div>
+    </aside>
+    <div class="modal-backdrop" id="orderModal">
+        <form class="order-modal" id="orderForm" novalidate="">
+            <button aria-label="Cerrar" class="close-button modal-close" id="modalClose" type="button">×</button>
+            <span class="section-kicker">CASI LISTO</span>
+            <h2>Completa tus <em>datos</em></h2>
+            <p class="modal-description">Déjanos tus datos para preparar el mensaje de tu reserva.</p>
+            <label for="customerName">Nombre completo</label>
+            <input autocomplete="name" id="customerName" maxlength="60" placeholder="Escribe tu nombre" type="text" />
+            <small class="field-error" id="nameError"></small>
+            <label for="customerPhone">Tu número de celular</label>
+            <input autocomplete="tel" id="customerPhone" inputmode="numeric" maxlength="8" placeholder="Ej. 70000000" type="tel" />
+            <small class="field-error" id="phoneError"></small>
+            <label for="customerNote">Detalle adicional (opcional)</label>
+            <textarea id="customerNote" maxlength="200" placeholder="Alguna indicación para tu reserva..." rows="3"></textarea>
+            <button class="button button-primary submit-order" type="submit">Enviar reserva por WhatsApp →</button>
+            <p class="form-message" id="formMessage"></p>
+        </form>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
